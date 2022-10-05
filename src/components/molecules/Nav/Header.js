@@ -53,7 +53,12 @@ const Header = () => {
             />
           )}
           {globalState.loginToken && (
-            <Button size='sm' text='Your account' onClick={() => navigate('/account')} />
+            <Button
+              size='sm'
+              text={globalState.userInfo.firstName + "'s Account"}
+              theme='secondary'
+              onClick={() => navigate('/account')}
+            />
           )}
           <div
             className='flex ml-3 h-1/2 flex-col hover:cursor-pointer md:hidden'

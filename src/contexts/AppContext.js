@@ -228,6 +228,12 @@ export const AppProvider = (props) => {
         isLoading: false
       }
     }
+    const clearFailMessage = () => {
+      return {
+        ...state,
+        auth: { failMessage: null }
+      }
+    }
 
     switch (action.type) {
       case 'SET_USER_INFO':
@@ -269,6 +275,8 @@ export const AppProvider = (props) => {
         return checkAuthSuccess()
       case 'CHECK_AUTH_FAILURE':
         return checkAuthFailure()
+      case 'CLEAR_FAIL_MESSAGE':
+        return clearFailMessage()
 
       default:
         return state

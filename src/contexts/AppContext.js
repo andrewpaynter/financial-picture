@@ -81,12 +81,12 @@ export const AppProvider = (props) => {
       }
     }
     const logInFailure = () => {
-      console.log(action.body.message)
       return {
         ...state,
         isLoading: false,
         auth: {
-          failMessage: action.body.message
+          failMessage:
+            action.body && action.body.message ? action.body.message : 'Something went wrong'
         }
       }
     }

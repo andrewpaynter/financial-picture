@@ -1,13 +1,13 @@
-import React, { useContext, useEffect} from 'react'
+import React, { useContext, useEffect } from 'react'
 import { MobileMenuContext } from '../../../contexts/MobileMenuContext'
 import MobileMenuDivider from './MobileMenuDivider'
 import MobileMenuItem from './MobileMenuItem'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { AppContext } from '../../../contexts/AppContext'
 
 const MobileMenu = () => {
   const { menuIsOpen, closeMenu } = useContext(MobileMenuContext)
-  const {globalState, dispatch} = useContext(AppContext)
+  const { globalState, dispatch } = useContext(AppContext)
 
   useEffect(() => {
     document.documentElement.style.overflow = menuIsOpen ? 'hidden' : 'visible'
@@ -21,10 +21,10 @@ const MobileMenu = () => {
   }
 
   const logOut = () => {
-    dispatch({type: 'LOG_OUT'})
+    dispatch({ type: 'LOG_OUT' })
     closeMenu()
   }
-  
+
   if (!menuIsOpen) return null
   return (
     <div className='z-20 bg-white w-full h-full fixed top-0 left-0 overflow-y-auto'>
@@ -38,30 +38,32 @@ const MobileMenu = () => {
         </div>
       </div>
 
-      {(globalState.loginToken) ? <div>
-        <MobileMenuDivider>Your Monarch</MobileMenuDivider>
-        <MobileMenuItem onClick={() => nav('/dashboard')}>Dashboard</MobileMenuItem>
-        <MobileMenuItem onClick={() => nav('/account')}>Account</MobileMenuItem>
-        <MobileMenuItem onClick={() => nav('/transactions')}>Transactions</MobileMenuItem>
-        <MobileMenuItem onClick={logOut}>Log Out</MobileMenuItem>
-        <MobileMenuDivider>Resources</MobileMenuDivider>
-        <MobileMenuItem>Thing 1</MobileMenuItem>
-        <MobileMenuItem>Thing 1</MobileMenuItem>
-        <MobileMenuItem>Thing 1</MobileMenuItem>
-        <MobileMenuItem>Thing 1</MobileMenuItem>
-      </div> : 
-      <div>
-      <MobileMenuDivider>Learn</MobileMenuDivider>
-      <MobileMenuItem>What We Do</MobileMenuItem>
-      <MobileMenuItem>Who We Are</MobileMenuItem>
-      <MobileMenuItem>Contact Us</MobileMenuItem>
-      <MobileMenuDivider>Resources</MobileMenuDivider>
-      <MobileMenuItem>Thing 1</MobileMenuItem>
-      <MobileMenuItem>Thing 1</MobileMenuItem>
-      <MobileMenuItem>Thing 1</MobileMenuItem>
-      <MobileMenuItem>Thing 1</MobileMenuItem>
-    </div>
-      }
+      {globalState.loginToken ? (
+        <div>
+          <MobileMenuDivider>Your Monarch</MobileMenuDivider>
+          <MobileMenuItem onClick={() => nav('/dashboard')}>Dashboard</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/account')}>Account</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/transactions')}>Transactions</MobileMenuItem>
+          <MobileMenuItem onClick={logOut}>Log Out</MobileMenuItem>
+          <MobileMenuDivider>Resources</MobileMenuDivider>
+          <MobileMenuItem>What We Do</MobileMenuItem>
+          <MobileMenuItem>Who We Are</MobileMenuItem>
+          <MobileMenuItem>Financial Advice</MobileMenuItem>
+          <MobileMenuItem>Contact Us</MobileMenuItem>
+        </div>
+      ) : (
+        <div>
+          <MobileMenuDivider>Learn</MobileMenuDivider>
+          <MobileMenuItem>What We Do</MobileMenuItem>
+          <MobileMenuItem>Who We Are</MobileMenuItem>
+          <MobileMenuItem>Contact Us</MobileMenuItem>
+          <MobileMenuDivider>Resources</MobileMenuDivider>
+          <MobileMenuItem>Financial Advice</MobileMenuItem>
+          <MobileMenuItem>Stock Market</MobileMenuItem>
+          <MobileMenuItem>Today's News</MobileMenuItem>
+          <MobileMenuItem>Updates</MobileMenuItem>
+        </div>
+      )}
     </div>
   )
 }

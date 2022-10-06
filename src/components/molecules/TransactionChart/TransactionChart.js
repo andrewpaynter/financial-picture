@@ -72,7 +72,7 @@ const TransactionChart = () => {
         name='query'
         value={formData.query}
       />
-      <table className='table-auto border border-slate-400 bg-slate-50 mt-4 text-center'>
+      <table className='table-auto border mx-auto border-slate-400 bg-slate-50 mt-4 text-center'>
         <TransactionHeader activeSort={activeSort} sortData={sortData} />
         <tbody className='flex flex-col'>
           {search(transactionData).map((transaction, transactionIndex) => {

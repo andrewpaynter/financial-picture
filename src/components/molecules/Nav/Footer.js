@@ -46,27 +46,27 @@ const Footer = () => {
       </div>
       <div className='mt-4 lg:mt-8 flex flex-col lg:flex-row text-center lg:text-left'>
         <div className='lg:ml-16 mt-6'>
-          <ParagraphText className='font-bold'>Category 1</ParagraphText>
-          <NavLink size='lg'>Thing</NavLink>
-          <NavLink size='lg'>Other Thing</NavLink>
-          <NavLink size='lg'>Thing</NavLink>
+          <ParagraphText className='font-bold'>Learn More</ParagraphText>
+          <NavLink size='lg'>What We Do</NavLink>
+          <NavLink size='lg'>Who We Are</NavLink>
+          <NavLink size='lg'>How to Join</NavLink>
           <NavLink size='lg'>Terms of Service</NavLink>
         </div>
         <div className='lg:ml-16 mt-6'>
-          <ParagraphText className='font-bold'>Category 1</ParagraphText>
+          <ParagraphText className='font-bold'>Our Product</ParagraphText>
           <NavLink size='lg'>What's New</NavLink>
-          <NavLink size='lg'>Dwonload</NavLink>
+          <NavLink size='lg'>Download</NavLink>
           <NavLink size='lg'>Pricing</NavLink>
-          <NavLink size='lg'>Thing</NavLink>
-          <NavLink size='lg'>Help</NavLink>
+          <NavLink size='lg'>FAQ</NavLink>
+          <NavLink size='lg'>Plans</NavLink>
         </div>
         <div className='lg:ml-16 mt-6'>
-          <ParagraphText className='font-bold'>Category 1</ParagraphText>
+          <ParagraphText className='font-bold'>Our Team</ParagraphText>
           <NavLink size='lg'>About</NavLink>
           <NavLink size='lg'>Contact Us</NavLink>
-          <ParagraphText className='font-bold mt-4'>Category 1</ParagraphText>
-          <NavLink size='lg'>Thing</NavLink>
-          <NavLink size='lg'>Terms of Service</NavLink>
+          <ParagraphText className='font-bold mt-4'>Press</ParagraphText>
+          <NavLink size='lg'>Press Releases</NavLink>
+          <NavLink size='lg'>Contact</NavLink>
         </div>
       </div>
     </footer>

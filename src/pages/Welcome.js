@@ -36,7 +36,7 @@ const Welcome = () => {
   }
 
   const reviews = {
-    'Andy P': 'This is the best app i have ever used and I want to marry the devs',
+    'Andy P': 'This is the best app i have ever used, download it now!',
     'Joshua W.':
       'I tried YNAB, I tried Mint, I use Monarch. Soooo much more intuitive and the UI/UX is delightful.',
     'Stephen C.':
@@ -64,11 +64,11 @@ const Welcome = () => {
 
       <Subtitle className='mt-6'>What people are saying about Monarch</Subtitle>
       <div className='flex justify-between items-center mt-9 font-bold text-xs'>
-        <div className='bg-amber-300 px-4 py-1 mr-3 rounded-full'>★ 6.9</div>
+        <div className='bg-amber-300 px-4 py-1 mr-3 rounded-full'>★ 4.9</div>
         <div>ON THE APP STORE</div>
       </div>
       <div className='flex justify-between items-center mt-5 font-bold text-xs'>
-        <div className='bg-amber-300 px-4 py-1 mr-3 rounded-full'>★ 4.2</div>
+        <div className='bg-amber-300 px-4 py-1 mr-3 rounded-full'>★ 4.8</div>
         <div>ON GOOGLE PLAY</div>
       </div>
 

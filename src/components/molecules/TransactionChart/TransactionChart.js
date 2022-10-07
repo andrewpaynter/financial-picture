@@ -13,7 +13,8 @@ const TransactionChart = () => {
     dispatch({ type: 'GET_TRANSACTIONS', token: globalState.loginToken })
   }, [])
   useEffect(() => {
-    if (globalState.transactionData) setTransactionData(globalState.transactionData)
+    if (globalState.transactionData && globalState.transactionData.constructor === Array)
+      setTransactionData(globalState.transactionData)
   }, [globalState.transactionData])
 
   function search(arr) {

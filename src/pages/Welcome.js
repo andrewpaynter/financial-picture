@@ -72,9 +72,9 @@ const Welcome = () => {
         <div>ON GOOGLE PLAY</div>
       </div>
 
-      <div className='grid md:grid-cols-2 grid-flow-row gap-6 mt-16'>{reviewCards}</div>
+      <div className='grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-6 mt-16'>{reviewCards}</div>
 
-      <div className='mt-16 grid grid-rows-3 md:grid-rows-2 lg:grid-rows-1 grid-cols-2 lg:grid-cols-4 gap-y-5 gap-x-2 grid-flow-row items-center justify-items-center w-96 md:w-auto'>
+      <div className='mt-16 grid grid-cols-2 lg:grid-cols-4 gap-y-5 gap-x-2 grid-flow-row items-center justify-items-center w-96 md:w-auto'>
         <img
           alt='fintech logo'
           src={FintechImg}

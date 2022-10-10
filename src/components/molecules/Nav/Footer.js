@@ -13,8 +13,8 @@ const Footer = () => {
         </div>
 
         <div className='flex mt-8'>
-          <img src={AppstoreImg} className='mr-4 hover:cursor-pointer' />
-          <img src={GooglePlayImg} className='hover:cursor-pointer' />
+          <img alt='app store' src={AppstoreImg} className='mr-4 hover:cursor-pointer' />
+          <img alt='google play store' src={GooglePlayImg} className='hover:cursor-pointer' />
         </div>
 
         <div className='flex mt-8'>

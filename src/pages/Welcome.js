@@ -60,7 +60,7 @@ const Welcome = () => {
       </ParagraphText>
       <Button text='Sign up now' className='mt-6' onClick={openSignUpModal} />
 
-      <img src={LaptopImg} className='mt-6' />
+      <img alt='laptop' src={LaptopImg} className='mt-6' />
 
       <Subtitle className='mt-6'>What people are saying about Monarch</Subtitle>
       <div className='flex justify-between items-center mt-9 font-bold text-xs'>
@@ -76,25 +76,29 @@ const Welcome = () => {
 
       <div className='mt-16 grid grid-rows-3 md:grid-rows-2 lg:grid-rows-1 grid-cols-2 lg:grid-cols-4 gap-y-5 gap-x-2 grid-flow-row items-center justify-items-center w-96 md:w-auto'>
         <img
+          alt='fintech logo'
           src={FintechImg}
           className='col-span-2 w-3/4 md:col-span-1 lg:w-full md:justify-self-end lg:justify-self-auto '
         />
         <img
+          alt='tech cruch logo'
           src={TechCrunchImg}
           className='col-span-2 w-3/4 md:col-span-1 lg:w-full md:justify-self-start lg:justify-self-auto '
         />
         <img
+          alt='business insider logo'
           src={BusinessInsiderImg}
           className='col-span-1 md:w-1/2 lg:w-full md:justify-self-end lg:justify-self-auto '
         />
         <img
+          alt='fast company logo'
           src={FastCompanyImg}
           className='col-span-1 md:w-1/2 lg:w-full md:justify-self-start lg:justify-self-auto '
         />
       </div>
       <div className='flex justify-center mt-16 scale-125'>
-        <img src={AppstoreImg} className='mr-4' />
-        <img src={GooglePlayImg} className='' />
+        <img alt='app store logo' src={AppstoreImg} className='mr-4' />
+        <img alt='google play store logo' src={GooglePlayImg} className='' />
       </div>
 
       <Section

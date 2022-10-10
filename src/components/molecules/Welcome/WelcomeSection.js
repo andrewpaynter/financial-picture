@@ -24,6 +24,7 @@ const Section = ({
   return (
     <div className='flex flex-col lg:flex-row justify-center content-center mt-16'>
       <img
+        alt='monarch demo'
         src={image}
         className={`sm:max-w-[620px] md:max-w-[750px] lg:max-w-screen-sm sm:mx-auto ${
           isReversed ? 'lg:order-last' : ''

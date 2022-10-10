@@ -58,12 +58,12 @@ const SignUpModalContent = () => {
 
     if (
       !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formData.email) ||
-      formData.email.length == 0
+      formData.email.length === 0
     ) {
       setValid((prevValid) => ({ ...prevValid, email: false }))
       submitReady = false
     }
-    if (!formData.firstName.match(/^[A-Za-z]+$/) || formData.firstName.length == 0) {
+    if (!formData.firstName.match(/^[A-Za-z]+$/) || formData.firstName.length === 0) {
       setValid((prevValid) => ({ ...prevValid, firstName: false }))
       submitReady = false
     }
@@ -75,7 +75,7 @@ const SignUpModalContent = () => {
       setValid((prevValid) => ({ ...prevValid, password: false }))
       submitReady = false
     }
-    if (formData.confirmPassword !== formData.password || formData.confirmPassword.length == 0) {
+    if (formData.confirmPassword !== formData.password || formData.confirmPassword.length === 0) {
       setValid((prevValid) => ({ ...prevValid, confirmPassword: false }))
       submitReady = false
     }

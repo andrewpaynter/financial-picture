@@ -88,7 +88,7 @@ const Dashboard = () => {
                   Set up your investment accounts to track your investments, set goals, and see your
                   net worth at a glance.
                 </ParagraphText>
-                <ParagraphText className='text-left mt-2 font-bold hover:underline hover:text-blue-600'>
+                <ParagraphText className='text-right md:text-left mt-2 font-bold hover:underline hover:text-blue-600'>
                   Connect accounts
                 </ParagraphText>
               </div>

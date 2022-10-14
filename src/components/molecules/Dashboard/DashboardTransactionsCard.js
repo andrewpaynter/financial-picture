@@ -19,7 +19,7 @@ const DashboardTransactionCard = () => {
             if (a.date > b.date) return 1
             return 0
           })
-          .slice(0, 3)
+          .slice(0, 5)
           .map((transaction) => {
             return (
               <tr
@@ -36,14 +36,17 @@ const DashboardTransactionCard = () => {
 
   return (
     <DashboardCard nav={'/transactions'}>
-      <div className='flex flex-col m-4 mb-8'>
-        <div className='flex justify-between lg:items-end flex-col lg:flex-row-reverse'>
+      <div className='flex flex-col m-4 mb-8 h-full'>
+        <div className='flex justify-between lg:items-end flex-col lg:flex-row-reverse '>
           <Subtitle>Transactions</Subtitle>
           <ParagraphText className='lg:text-right'>Most Recent:</ParagraphText>
         </div>
-        <table className='table-auto border mx-auto border-slate-400 bg-white mt-4 text-center'>
+        <table className='table-auto border mx-auto border-slate-400 bg-white mt-12 text-center'>
           <tbody className='flex flex-col'>{transactionData}</tbody>
         </table>
+        <ParagraphText className='bg-white mt-4 p-4 rounded-xl border font-bold hover:cursor-pointer hover:underline hover:text-blue-600'>
+          View all transactions
+        </ParagraphText>
       </div>
     </DashboardCard>
   )

@@ -21,7 +21,7 @@ const Dashboard = () => {
   return (
     <div className='pb-32 pt-16 bg-slate-100 min-h-screen'>
       <div
-        className='flex flex-col px-2 text-center items-center mx-10
+        className='flex flex-col px-2 text-center items-center mx-4
       md:mx-auto md:max-w-screen-md lg:max-w-screen-lg pb-32'
       >
         <Title>Dashboard</Title>
@@ -29,11 +29,11 @@ const Dashboard = () => {
           Welcome back, {globalState.userInfo.firstName}! Here's your account at a glance.
         </ParagraphText>
 
-        <div className='w-full grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-8 xl:gap-16 mt-16'>
+        <div className='w-full grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-4 md:gap-8 xl:gap-16 mt-16'>
           <DashboardTransactionCard />
           <DashboardCard nav={'/features'}>
             <div className='flex flex-col-reverse md:flex-col justify-center content-center m-4'>
-              <div className=' bg-white p-8 rounded-xl border mt-4 md:mt-0'>
+              <div className=' bg-white pt-4 p-2 sm:pt-4 sm:p-4 md:p-8 rounded-xl border mt-4 md:mt-0'>
                 <Subtitle className={`text-center lg:text-left`}>Personalized Advice</Subtitle>
                 <ParagraphText className={`mt-2 text-center lg:text-left`}>
                   Answer a few key questions about yourself to get advice on how to build financial
@@ -61,10 +61,7 @@ const Dashboard = () => {
                   Secure your account
                 </ParagraphText>
               </div>
-              <div className='flex'>
-                <img alt='monarch demo' src={SecurityImg} className={`w-1/2 flex mx-auto`} />
-                <img alt='monarch demo' src={CollaborateImg} className={`w-1/2 flex mx-auto`} />
-              </div>
+              <img alt='monarch demo' src={SecurityImg} className={`w-4/5 flex mx-auto`} />
             </div>
           </DashboardCard>
           <DashboardCard nav={'/features'}>
@@ -79,14 +76,11 @@ const Dashboard = () => {
                   Connect accounts
                 </ParagraphText>
               </div>
-              <div className='flex'>
-                <img alt='monarch demo' src={InvestmentsImg} className={`w-1/2 flex mx-auto`} />
-                <img
-                  alt='monarch demo'
-                  src={UnderstandAndGrowImg}
-                  className={`w-1/2 flex mx-auto`}
-                />
-              </div>
+              <img
+                alt='monarch demo'
+                src={InvestmentsImg}
+                className={`w-4/5 flex mx-auto md:pt-6`}
+              />
             </div>
           </DashboardCard>
         </div>

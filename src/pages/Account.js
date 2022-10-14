@@ -46,7 +46,6 @@ const Account = () => {
             text='Log Out'
             onClick={() => {
               dispatch({ type: 'LOG_OUT' })
-              navigate('/')
             }}
           />
           <Button
@@ -54,7 +53,6 @@ const Account = () => {
             text='Delete Profile'
             onClick={() => {
               dispatch({ type: 'LOG_OUT' })
-              navigate('/')
             }}
           />
         </div>

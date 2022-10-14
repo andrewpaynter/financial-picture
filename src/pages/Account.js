@@ -9,7 +9,7 @@ const Account = () => {
   const navigate = useNavigate
 
   return (
-    <div className='px-10 md:px-auto pt-20 pb-32 bg-slate-200 min-h-screen'>
+    <div className='px-10 md:px-auto pt-20 pb-32 bg-slate-100 min-h-screen'>
       <div className='flex flex-col mx-0 md:mx-auto md:max-w-screen-md lg:max-w-screen-lg'>
         <Title className='text-left'>Your Account</Title>
         <div className='grid grid-cols-3 w-full min-h-[50%] drop-shadow-md mt-6 border rounded-md border-slate-400'>

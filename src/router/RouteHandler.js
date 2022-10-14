@@ -1,22 +1,24 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import Dashboard from './pages/Dashboard'
-import Features from './pages/Features'
-import Transactions from './pages/Transactions'
-import Welcome from './pages/Welcome'
-import Subfooter from './pages/Subfooter'
-import Account from './pages/Account'
+import Dashboard from '../pages/Dashboard'
+import Features from '../pages/Features'
+import Transactions from '../pages/Transactions'
+import Welcome from '../pages/Welcome'
+import Subfooter from '../pages/Subfooter'
+import Account from '../pages/Account'
 
-import Modal from './components/molecules/Modal/Modal'
-import MobileMenu from './components/molecules/Nav/MobileMenu'
+import Modal from '../components/molecules/Modal/Modal'
+import MobileMenu from '../components/molecules/Nav/MobileMenu'
 
 import AuthRoute from './AuthRoute'
 import StandardPageLayout from './StandardPageLayout'
+import ScrollToTop from './ScrollToTop'
 
 const RouteHandler = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Modal />
       <MobileMenu />
       <Routes>

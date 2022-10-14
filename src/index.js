@@ -6,8 +6,7 @@ import { ModalProvider } from './contexts/ModalContext'
 import { AppProvider } from './contexts/AppContext'
 import { MobileMenuProvider } from './contexts/MobileMenuContext'
 
-
-import RouteHandler from './RouteHandler'
+import RouteHandler from './router/RouteHandler'
 
 const App = () => {
   return (

@@ -2,11 +2,9 @@ import React, { useContext } from 'react'
 import Title from '../components/atoms/Title'
 import Button from '../components/atoms/Button'
 import { AppContext } from '../contexts/AppContext'
-import { useNavigate } from 'react-router-dom'
 
 const Account = () => {
   const { globalState, dispatch } = useContext(AppContext)
-  const navigate = useNavigate
 
   return (
     <div className='px-10 md:px-auto pt-20 pb-32 bg-slate-100 min-h-screen'>

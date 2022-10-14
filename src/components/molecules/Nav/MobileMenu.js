@@ -54,14 +54,14 @@ const MobileMenu = () => {
       ) : (
         <div>
           <MobileMenuDivider>Learn</MobileMenuDivider>
-          <MobileMenuItem>What We Do</MobileMenuItem>
-          <MobileMenuItem>Who We Are</MobileMenuItem>
-          <MobileMenuItem>Contact Us</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/')}>What We Do</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/')}>Who We Are</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/')}>Contact Us</MobileMenuItem>
           <MobileMenuDivider>Resources</MobileMenuDivider>
-          <MobileMenuItem>Financial Advice</MobileMenuItem>
-          <MobileMenuItem>Stock Market</MobileMenuItem>
-          <MobileMenuItem>Today's News</MobileMenuItem>
-          <MobileMenuItem>Updates</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/')}>Financial Advice</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/')}>Stock Market</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/')}>Today's News</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/')}>Updates</MobileMenuItem>
         </div>
       )}
     </div>

@@ -8,5 +8,4 @@ const api = {
   auth: auth,
   users: users
 }
-console.log(api)
 export default api

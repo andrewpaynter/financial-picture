@@ -36,10 +36,10 @@ const DashboardTransactionCard = () => {
 
   return (
     <DashboardCard nav={'/transactions'}>
-      <div className='flex flex-col m-4'>
-        <div className='flex justify-between items-end'>
-          <ParagraphText className='text-right'>Most Recent:</ParagraphText>
+      <div className='flex flex-col m-4 mb-8'>
+        <div className='flex justify-between lg:items-end flex-col lg:flex-row-reverse'>
           <Subtitle>Transactions</Subtitle>
+          <ParagraphText className='lg:text-right'>Most Recent:</ParagraphText>
         </div>
         <table className='table-auto border mx-auto border-slate-400 bg-white mt-4 text-center'>
           <tbody className='flex flex-col'>{transactionData}</tbody>

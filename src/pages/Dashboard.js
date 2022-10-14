@@ -1,35 +1,22 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../contexts/AppContext'
-import Button from '../components/atoms/Button'
 import Title from '../components/atoms/Title'
 import ParagraphText from '../components/atoms/ParagraphText'
 import DashboardCard from '../components/molecules/Dashboard/DashboardCard'
 import Subtitle from '../components/atoms/Subtitle'
-import { useNavigate } from 'react-router-dom'
+
 import DashboardTransactionCard from '../components/molecules/Dashboard/DashboardTransactionsCard'
 import {
-  AdsImg,
-  AppstoreImg,
-  BudgetImg,
-  BusinessInsiderImg,
   CollaborateImg,
-  CustomizeImg,
-  FastCompanyImg,
-  FintechImg,
-  GooglePlayImg,
   InvestmentsImg,
   PersonalizedImg,
   PlanImg,
   SecurityImg,
-  SpendingImg,
-  TechCrunchImg,
-  UnderstandAndGrowImg,
-  LaptopImg
+  UnderstandAndGrowImg
 } from '../images'
 
 const Dashboard = () => {
-  const { globalState, dispatch } = useContext(AppContext)
-  let navigate = useNavigate()
+  const { globalState } = useContext(AppContext)
 
   return (
     <div className='pb-32 pt-16 bg-slate-100 min-h-screen'>
@@ -44,7 +31,7 @@ const Dashboard = () => {
 
         <div className='w-full grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-8 xl:gap-16 mt-16'>
           <DashboardTransactionCard />
-          <DashboardCard>
+          <DashboardCard nav={'/features'}>
             <div className='flex flex-col-reverse md:flex-col justify-center content-center m-4'>
               <div className=' bg-white p-8 rounded-xl border mt-4 md:mt-0'>
                 <Subtitle className={`text-center lg:text-left`}>Personalized Advice</Subtitle>
@@ -62,7 +49,7 @@ const Dashboard = () => {
               </div>
             </div>
           </DashboardCard>
-          <DashboardCard>
+          <DashboardCard nav={'/features'}>
             <div className='flex flex-col md:flex-col-reverse justify-center content-center m-4'>
               <div className=' bg-white p-8 rounded-xl border md:mt-4'>
                 <Subtitle className={`text-center lg:text-left`}>Security Checkup</Subtitle>
@@ -80,7 +67,7 @@ const Dashboard = () => {
               </div>
             </div>
           </DashboardCard>
-          <DashboardCard>
+          <DashboardCard nav={'/features'}>
             <div className='flex flex-col-reverse md:flex-col justify-center content-center m-4'>
               <div className=' bg-white p-8 rounded-xl border mt-4 md:mt-0'>
                 <Subtitle className={`text-center lg:text-right`}>Investments</Subtitle>

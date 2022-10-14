@@ -23,7 +23,6 @@ const Subfooter = () => {
         </ParagraphText>
         <div className='flex mx-auto mt-8'>
           <Button text='Sign up now' onClick={openSignUpModal} />
-          <Button className='ml-4' text='Browse features' theme='secondary' />
         </div>
       </div>
     </div>

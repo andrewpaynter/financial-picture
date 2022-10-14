@@ -15,59 +15,61 @@ import AuthRoute from './AuthRoute'
 import StandardPageLayout from './StandardPageLayout'
 
 const RouteHandler = () => {
-
   return (
     <Router>
-    <Modal />
-    <MobileMenu />
-        <Routes>
-          <Route
-            exact path='/'
-            element={
-                <StandardPageLayout>
-                  <Welcome />
-                  <Subfooter />
-                </StandardPageLayout>}
-          />
-          <Route
-            path='/dashboard'
-            element={
+      <Modal />
+      <MobileMenu />
+      <Routes>
+        <Route
+          exact
+          path='/'
+          element={
+            <StandardPageLayout>
+              <Welcome />
+              <Subfooter />
+            </StandardPageLayout>
+          }
+        />
+        <Route
+          path='/dashboard'
+          element={
             <AuthRoute>
               <StandardPageLayout>
                 <Dashboard />
               </StandardPageLayout>
-            </AuthRoute>}
-          />
-          <Route
-            path='/transactions'
-            element={
+            </AuthRoute>
+          }
+        />
+        <Route
+          path='/transactions'
+          element={
             <AuthRoute>
               <StandardPageLayout>
                 <Transactions />
               </StandardPageLayout>
-            </AuthRoute>}
-          />
-          <Route 
-            path='/features' 
-            element={
-              <AuthRoute>
-                <StandardPageLayout>
-                  <Features />
-                </StandardPageLayout>
-              </AuthRoute>} 
-          />
-          <Route
-            path='/account'
-            element={
-              <AuthRoute>
-                <StandardPageLayout>
-                  <Account />
-                </StandardPageLayout>
-              </AuthRoute>}
-          />
-        </Routes>
-  </Router>
-    
+            </AuthRoute>
+          }
+        />
+        <Route
+          path='/features'
+          element={
+            <StandardPageLayout>
+              <Features />
+            </StandardPageLayout>
+          }
+        />
+        <Route
+          path='/account'
+          element={
+            <AuthRoute>
+              <StandardPageLayout>
+                <Account />
+              </StandardPageLayout>
+            </AuthRoute>
+          }
+        />
+      </Routes>
+    </Router>
   )
 }
 

@@ -46,22 +46,22 @@ const MobileMenu = () => {
           <MobileMenuItem onClick={() => nav('/transactions')}>Transactions</MobileMenuItem>
           <MobileMenuItem onClick={logOut}>Log Out</MobileMenuItem>
           <MobileMenuDivider>Resources</MobileMenuDivider>
-          <MobileMenuItem>What We Do</MobileMenuItem>
-          <MobileMenuItem>Who We Are</MobileMenuItem>
-          <MobileMenuItem>Financial Advice</MobileMenuItem>
-          <MobileMenuItem>Contact Us</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/features')}>What We Do</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/features')}>Who We Are</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/features')}>Financial Advice</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/features')}>Contact Us</MobileMenuItem>
         </div>
       ) : (
         <div>
           <MobileMenuDivider>Learn</MobileMenuDivider>
-          <MobileMenuItem onClick={() => nav('/')}>What We Do</MobileMenuItem>
-          <MobileMenuItem onClick={() => nav('/')}>Who We Are</MobileMenuItem>
-          <MobileMenuItem onClick={() => nav('/')}>Contact Us</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/features')}>What We Do</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/features')}>Who We Are</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/features')}>Contact Us</MobileMenuItem>
           <MobileMenuDivider>Resources</MobileMenuDivider>
-          <MobileMenuItem onClick={() => nav('/')}>Financial Advice</MobileMenuItem>
-          <MobileMenuItem onClick={() => nav('/')}>Stock Market</MobileMenuItem>
-          <MobileMenuItem onClick={() => nav('/')}>Today's News</MobileMenuItem>
-          <MobileMenuItem onClick={() => nav('/')}>Updates</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/features')}>Financial Advice</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/features')}>Stock Market</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/features')}>Today's News</MobileMenuItem>
+          <MobileMenuItem onClick={() => nav('/features')}>Updates</MobileMenuItem>
         </div>
       )}
     </div>

@@ -7,6 +7,7 @@ import ParagraphText from '../components/atoms/ParagraphText'
 import Section from '../components/molecules/Welcome/WelcomeSection'
 import { ModalContext } from '../contexts/ModalContext'
 import SignUpModalContent from '../components/molecules/Modal/SignUpModalContent'
+import { useNavigate } from 'react-router-dom'
 import {
   AdsImg,
   AppstoreImg,
@@ -29,11 +30,11 @@ import {
 
 const Welcome = () => {
   const { setModal, openModal } = useContext(ModalContext)
-
   const openSignUpModal = () => {
     setModal(<SignUpModalContent />)
     openModal()
   }
+  let navigate = useNavigate()
 
   const reviews = {
     'Andy P': 'This is the best app i have ever used, download it now!',
@@ -97,8 +98,18 @@ const Welcome = () => {
         />
       </div>
       <div className='flex justify-center mt-16 scale-125'>
-        <img alt='app store logo' src={AppstoreImg} className='mr-4' />
-        <img alt='google play store logo' src={GooglePlayImg} className='' />
+        <img
+          onClick={() => navigate('/features')}
+          alt='app store logo'
+          src={AppstoreImg}
+          className='mr-4 hover:cursor-pointer'
+        />
+        <img
+          onClick={() => navigate('/features')}
+          alt='google play store logo'
+          src={GooglePlayImg}
+          className='hover:cursor-pointer'
+        />
       </div>
 
       <Section

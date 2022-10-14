@@ -55,7 +55,12 @@ const Header = () => {
           {globalState.loginToken && (
             <Button
               size='sm'
-              text={globalState.userInfo.firstName + "'s Account"}
+              text={
+                <span>
+                  <span className='hidden sm:inline'>{globalState.userInfo.firstName}'s </span>
+                  Account
+                </span>
+              }
               theme='secondary'
               onClick={() => navigate('/account')}
             />
